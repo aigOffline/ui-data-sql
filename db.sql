@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS public.menu
 
 CREATE TABLE IF NOT EXISTS public.restaurants
 (
-    id bigint NOT NULL DEFAULT nextval('restaurants_id_seq'::regclass),
+    id bigserial NOT NULL DEFAULT nextval('restaurants_id_seq'::regclass),
     name character varying(50) COLLATE pg_catalog."default",
     location character varying(50) COLLATE pg_catalog."default",
     price_range integer NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS public.restaurants
 
 CREATE TABLE IF NOT EXISTS public.reviews
 (
-    id bigint NOT NULL DEFAULT nextval('reviews_id_seq'::regclass),
+    id bigserial NOT NULL DEFAULT nextval('reviews_id_seq'::regclass),
     restaurant_id bigint NOT NULL,
     name character varying(50) COLLATE pg_catalog."default" NOT NULL,
     review text COLLATE pg_catalog."default" NOT NULL,
