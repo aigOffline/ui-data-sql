@@ -17,10 +17,9 @@ CREATE TRIGGER payment_made_trigger
   FOR EACH ROW
   EXECUTE PROCEDURE payment_made();
   
-  
-  INSERT INTO public.payment(
-	 order_id, payment_date, amount, payment_type)
-	VALUES ( 3, '09-09-2019', 100, 'debit');
+ INSERT INTO public.payment(
+ order_id, payment_date, amount, payment_type)
+ VALUES ( 3, '09-09-2019', 100, 'debit');
     
     
     
